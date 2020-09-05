@@ -1,0 +1,56 @@
+@host=http://127.0.0.1:1998
+
+###
+
+POST {{host}}/books HTTP/1.1
+content-type: application/json; charset=utf-8
+
+[
+  {
+    "summary": "授人以鱼不如授人以渔，从根儿上理解 MySQL，让 MySQL 不再是一个黑盒。",
+    "title": "MySQL 是怎样运行的：从根儿上理解 MySQL",
+    "author": "小孩子4919",
+    "isBuy": false,
+    "cover_img": "https://i.loli.net/2020/08/02/BTJHKOZ7h2Qz3wp.png"
+  },
+  {
+    "summary": "一个简单又好玩的学习方法，最快理解学习Go语言，用最直接的方式带你看懂Go语言。",
+    "title": "漫画 Go 语言 纯手绘版",
+    "author": "haojiahuo",
+    "isBuy": false,
+    "cover_img": "https://i.loli.net/2020/08/02/nmO245CxtqSEiVX.png"
+  }
+]
+
+###
+
+GET {{host}}/checkHealth HTTP/1.1
+
+###
+
+GET {{host}}/books HTTP/1.1
+
+###
+
+GET {{host}}/books/getBookDetails?title=MySQL 是怎样运行的：从根儿上理解 MySQL HTTP/1.1w
+
+###
+
+PUT {{host}}/books/updateBook?title=MySQL 是怎样运行的：从根儿上理解 MySQL HTTP/1.1
+content-type: application/json; charset=utf-8
+
+{
+  "summary": "授人以鱼不如授人以渔，从根儿上理解 MySQL，让 MySQL 不再是一个黑盒。",
+  "title": "MySQL 是怎样运行的：从根儿上理解 MySQL",
+  "author": "小孩子4919",
+  "isBuy": true,
+  "cover_img": "https://i.loli.net/2020/08/02/BTJHKOZ7h2Qz3wp.png"
+}
+
+###
+
+DELETE  {{host}}/books/deleteBook?title=MySQL 是怎样运行的：从根儿上理解 MySQL HTTP/1.1
+
+###
+
+DELETE  {{host}}/books/deleteBook?title=漫画 Go 语言 纯手绘版 HTTP/1.1
