@@ -15,4 +15,10 @@ export {
   Middleware,
   MiddlewareTarget,
   Context,
+  Req,
+  Res,
+  Request,
+  Response,
+  Redirect,
 } from "https://deno.land/x/alosaur@v0.21.2/mod.ts";
+export { send } from "https://deno.land/x/alosaur@v0.21.2/src/static/send.ts";

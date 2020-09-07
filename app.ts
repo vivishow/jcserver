@@ -5,7 +5,8 @@ const app = new App(settings);
 
 app.useStatic({
   root: `${Deno.cwd()}/public/`,
-  baseRoute: "/static/",
+  index: "index.html",
+  baseRoute: "",
 });
 
 app.listen({ port: 3000 });
