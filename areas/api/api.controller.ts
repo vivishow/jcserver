@@ -7,13 +7,21 @@ import {
   Param,
   QueryParam,
   Body,
+  Redirect,
 } from "../../deps.ts";
+import {
+  createOrders,
+  getOrderDetails,
+  getOrders,
+  deleteOrder,
+  updateOrder,
+} from "../../services/orders.ts";
 
 @Controller("/api")
 export class ApiController {
   @Get("/orders")
   getOrders() {
-    return "all of orders";
+    return { data: "all of orders" };
   }
 
   @Get("/orders/:id")
@@ -22,7 +30,8 @@ export class ApiController {
   }
 
   @Post("/addOrder")
-  addOrder(@Body() body: any) {
-    return body;
+  async addOrder(@Body() body: any) {
+    await createOrders(body);
+    return { msg: "已添加,请查看!" };
   }
 }

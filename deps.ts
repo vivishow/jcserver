@@ -22,3 +22,4 @@ export {
   Redirect,
 } from "https://deno.land/x/alosaur@v0.21.2/mod.ts";
 export { send } from "https://deno.land/x/alosaur@v0.21.2/src/static/send.ts";
+export { CorsBuilder } from "https://deno.land/x/alosaur@v0.21.2/src/middlewares/cors-builder.ts";

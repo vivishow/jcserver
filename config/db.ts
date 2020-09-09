@@ -1,4 +1,6 @@
-import { MongoClient } from "../deps.ts";
+import { MongoClient, env } from "../deps.ts";
+
+env({ export: true });
 
 const DB_USER = Deno.env.get("DB_USER");
 const DB_PASSWD = Deno.env.get("DB_PASSWD");

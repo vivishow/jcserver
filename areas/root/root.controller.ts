@@ -6,9 +6,4 @@ export class RootController {
   public async getRoot() {
     return "root page";
   }
-
-  @Get("/addOrders")
-  addOrdersPage() {
-    return Redirect("/test.html");
-  }
 }

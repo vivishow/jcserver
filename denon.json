@@ -1,5 +1,4 @@
 {
-  "watch": true,
   "scripts": {
     "start": {
       "cmd": "./app.ts",
@@ -14,5 +13,8 @@
       "allow": ["env", "plugin", "read", "write", "net"],
       "unstable": true
     }
+  },
+  "watcher": {
+    "legacy": true
   }
 }

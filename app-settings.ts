@@ -4,6 +4,5 @@ import { ApiArea } from "./areas/api/api.area.ts";
 
 export const settings: AppSettings = {
   areas: [RootArea, ApiArea],
-  middlewares: [],
-  logging: false,
+  logging: true,
 };
